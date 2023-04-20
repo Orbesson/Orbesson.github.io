@@ -384,8 +384,15 @@ footer{
 @media screen and (max-width:999px){
     .grid-container{
         grid-template-areas:
-        "a a"
-        "b c"
-        "d d";
+        "a"
+        "b"
+        "c"
+        "d";
+
+        grid-template-columns: 1fr;
+    }
+
+    .card .card-text .big-card{
+        min-width: ;
     }
 }
