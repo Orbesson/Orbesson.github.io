@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: blanchedalmond;
+    width: 100%;
+}
+
+.card-container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.card {
+    padding: 20px 35px;
+    height: 250px;
+    flex: 1 1 40%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    color: whitesmoke;
+    overflow:hidden;
+}
+
+.card::before{
+    content: '';
+    width: 100%;
+    background: rgba(0, 0, 0, 0.46);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.card:hover::before{
+    opacity: 1;
+}
+
+.card:hover .card-line{
+    animation: fade-from-left .6s;
+    display: block;
+}
+
+.card:hover .card-info{
+    display: block;
+    left: 0;
+    animation: fade-from-right 1s;
+}
+
+.card > *{
+    z-index: 1;
+    position: relative;
+}
+
+.card1{
+    background-image: linear-gradient(to bottom right, rgba(255, 179, 0, 1), transparent, transparent), url(../img/Pilgrimsmussla.jpg);
+}
+
+.card2{
+    background-image: linear-gradient(to bottom right, rgba(255, 179, 0, 1), transparent, transparent), url(../img/Efterrätt.jpg);
+}
+
+.card3{
+    background-image: url(../img/Julbord.jpg) ;
+}
+
+.card4{
+    background-image: url(../img/Nyårsmiddag.jpg);
+}
+
+.card > a {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.card h1 {
+    text-transform: uppercase;
+    font-size: 48px;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-family: 'Gentium Book Basic', serif;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.card h1, .card h2{
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.9);
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-line{
+    width: 100%;
+    height: 3px;
+    background-color: whitesmoke;
+    margin: 10px 0;
+    display: none;
+}
+
+.card-info{
+    font-family: 'Gentium Book Basic', serif;
+    display: none;
+    position: relative;
+}
+
+.card-info > *{
+    margin: 15px 0;
+}
+
+.card-btn > a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 6px 30px;
+    border: 2px solid white;
+    display: inline-block;
+}
+
+@keyframes fade-from-left{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes fade-from-right{
+    from{
+        left: 120%;
+    }
+    to{
+        left: 0;
+    }
+}

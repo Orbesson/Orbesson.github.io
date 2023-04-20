@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: brown;
+}
+
+nav img{
+    max-height: 80px;
+    max-width: 100%;
+}
+
+nav{
+    display: flex;
+    background-color: white;
+    max-height: 80px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 22px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #00000099;
+}
+
+#hem{
+    color: red;
+}
+
+a:hover{
+    color:#00000050;
+}
+
+#hem:hover{
+    color:#ff000050;
+}
+
+main .hero{
+    background-image: url(../img/Namnlös.png);
+    background-size: cover;
+    background-position: center;
+    height: 655px;
+    position: relative;
+}
+
+.hero-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color:white;
+    font-family: sans-serif;
+}
+
+.hero img{
+    width: 100%;
+    height: 600px;
+}
