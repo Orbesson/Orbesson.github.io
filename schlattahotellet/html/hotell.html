@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Schlättahotellet</title>
-        <link rel="icon" type="image/x-icon" href="../img/Fasader-1024x723.png">
-        <meta name="description" content="">
+        <link rel="icon" type="image/x-icon" href="./img/Fasader-1024x723.png">
+        <meta name="description" content="hotel">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/b085ed4d95.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
         <link rel="stylesheet" type="text/css" href="../css/css-reset.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="../js/script.js"></script>
     </head>
     <body>
@@ -19,19 +20,25 @@
                     <a href="../index.html"></a>
                     <h1>schlättahotellet</h1>
                 </div>
-                <ul role="list">
-                    <li><a class="active" href="./hotell.html">hotell</a></li>
-                    <li><a href="./restaurang.html">restaurang</a></li>
-                    <li class="dropdown">
-                        <a href="./paket.html">paket <i class="fa-solid fa-chevron-down"></i></a>
-                        <ul class="dropdown-content">
-                            <li><a href="#">middagspaketet</a></li>
-                            <li><a href="#">rörelsepaketet</a></li>
-                            <li><a href="#">paketet</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="./boka.html">boka</a></li>
-                </ul>
+                <input type="checkbox" name="hamburger" id="hamburger">
+                <label for="hamburger">
+                    <span class="hamburger-icons"></span>
+                </label>
+                <div class="hamburger-overlay">
+                    <ul role="menu" id="myLinks">
+                        <li><a class="active" href="./hotell.html">hotell</a></li>
+                        <li><a href="./restaurang.html">restaurang</a></li>
+                        <li class="dropdown">
+                            <a href="./paket.html">paket <i class="fa-solid fa-chevron-down"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">middagspaketet</a></li>
+                                <li><a href="#">rörelsepaketet</a></li>
+                                <li><a href="#">paketet</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="./boka.html">boka</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
         <main>
@@ -87,10 +94,10 @@
                 <div class="border">
                     <div class="flex-container">
                         <div class="text">
-                            <h5>det bästa från schlättahotellet</h5>
+                            <h3>det bästa från schlättahotellet</h3>
                             <h2>gourmetpaket</h2>
                             <p>Unna dig gastronomi i världsklass med vårt gourmetpaket på Schlättahotellet! Njut av en utsökt fyrarättersmiddag av lokala och närproducerade varor, med vinpaket och välkomstdrink inkluderat. Frukost och spa ingår också för en helhetsupplevelse. Boka nu för att väcka alla sinnen!</p>
-                            <a href="#">läs mer</a>
+                            <a href="./paket.html">läs mer</a>
                         </div>
                         <div class="picture"></div>
                     </div>
