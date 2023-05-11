@@ -1,0 +1,559 @@
+:root{
+    --main-color: #000000;
+    --secondary-color: rgb(217, 217, 217);
+    --text-color: rgb(211, 211, 211);
+    --navbar-height: 5.52rem;
+}
+
+body{
+    font-family:'Courier New', Courier, monospace, sans-serif;
+    height: 100%;
+    background-color: var(--main-color);
+}
+
+header{
+    padding-top: 1.2rem;
+}
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(15, 14, 14);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    height: var(--navbar-height);
+    padding: 0 2rem;
+    transition: top 0.3s;
+}
+
+.logo{
+    position: relative;
+}
+
+.logo:hover{
+    opacity: 0.85;
+}
+
+.logo > a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.logo h1{
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    color: var(--text-color);
+    border-bottom: 0.125rem solid rgb(1, 1, 23);
+    text-transform: capitalize;
+}
+
+nav ul{
+    display: flex;
+    height: calc(var(--navbar-height) - 1.25rem);
+    list-style: none;
+}
+
+nav ul a{
+    color: var(--text-color);
+    font-size: 1.125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.0938rem;
+    display: block;
+    height: calc(var(--navbar-height) - 1.25rem);
+    line-height: calc(var(--navbar-height) - 1.25rem);
+    padding: 0 0.625rem;
+    transition: all 0.4s;
+}
+
+nav .hamburger-overlay > ul > li:not(:last-child) > a{
+    border-right: 0.125rem solid var(--secondary-color);
+}
+
+nav ul a:hover{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    transition: all 200ms ease-in-out;
+}
+
+/* Hamburger */
+
+#hamburger{
+    display: none;
+}
+
+header label{
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.hamburger-icons,
+.hamburger-icons::after,
+.hamburger-icons::before{
+    content: "";
+    display: block;
+    width: 22px;
+    height: 3px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .35s ease-in-out;
+}
+
+.hamburger-icons::before{
+    transform: translate(-50%,-6px);
+}
+
+.hamburger-icons::after{
+    transform: translate(-50%,6px)
+}
+
+#hamburger:checked + label .hamburger-icons{
+    background: transparent;
+    transition: all 0ms;
+}
+
+#hamburger:checked + label .hamburger-icons::before{
+    transform: translateX(-50%) rotate(45deg);
+}
+
+#hamburger:checked + label .hamburger-icons::after{
+    transform: translateX(-50%) rotate(-45deg);
+}
+
+/* Neddroppet */
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.dropdown-content a{
+    background-color: var(--main-color);
+    text-decoration: none;
+    display: block;
+    border: none;
+    
+}
+
+/* Heron */
+
+main .hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(148, 72, 21, 0.6), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/Poolen.webp);
+    background-size: cover;
+    height: 49.3rem;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-info{
+    padding-left: 5%;
+    max-width: 40rem;
+
+}
+
+.hero-info h1, .hero-info h3{
+    color: var(--text-color);
+    margin: 1rem;
+}
+
+.hero-info h1{
+    font-size: 3rem;
+}
+
+.hero-info h1::first-letter{
+    text-transform: uppercase;
+}
+
+.hero-info h3{
+    font-size: 1.4rem;
+}
+
+/* Korten */
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 20rem;
+    width: 80vw;
+    margin: 3rem auto;
+    gap: 2rem;
+    grid-template-areas: 
+        "a a b"
+        "c d d";
+}
+
+.grid-container > div::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    transition: all .3s ease-in-out;
+    opacity: 0.6;
+}
+
+.grid-container > div:hover::before{
+    opacity: 1;
+}
+
+.grid-container > div:nth-child(1){
+    grid-area: a;
+    background: url(../img/Restaurangen.webp);
+    background-position: center;
+    background-size: cover;
+    border-radius: 1.5rem;
+}
+
+.grid-container > div:nth-child(2){
+    grid-area: b;
+    background-image: url(../img/Sviten.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+}
+
+.grid-container > div:nth-child(3){
+    grid-area: c;
+    background-image: url(../img/worldbytina-wetterskog-the-blue-orange-katharina-grosse-vara-station-1.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+}
+
+.grid-container > div:nth-child(4){
+    grid-area: d;
+    background-image: url(../img/1920x844-konferensrum.webp);
+    background-size: cover;
+    background-position: center;
+    border-radius: 1.5rem;
+}
+
+.card{
+    position: relative;
+    overflow: hidden;
+}
+
+.grid-container > .card a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 1.5rem;
+    z-index: 4;
+}
+
+.card .card-text{
+    position: absolute;
+    top: 0;
+    color: var(--text-color);
+    height: 20rem;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.card .card-text h1{
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    text-shadow: 0.13rem 0.13rem 0.438rem rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 0;
+    margin-top: 2.59rem;
+}
+
+.card .card-line{
+    width: 100%;
+    height: 0.188rem;
+    background-color: var(--text-color);
+    margin: 7rem 0;
+    display: none;
+}
+
+.card:hover .card-line{
+    animation: fade-from-left .6s;
+    display: block;
+}
+
+.card .card-text .card-info{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 2rem;
+}
+
+.card:hover .card-info{
+    display: block;
+    left: 0;
+    animation: fade-from-right 1.2s;
+}
+
+.card .card-text .small-card{
+    min-width: calc(100% - 1rem);
+}
+
+.card .card-text .big-card{
+    min-width: calc(100% - 2rem);
+}
+
+.active{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+}
+
+.card-info::first-letter{
+    text-transform: uppercase;
+}
+
+/* gourmetpaket bilden */
+
+.paket{
+    height: 39.75rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.border{
+    height: 95%;
+    width: 95%;
+    margin: 0 auto;
+    border: 0.1rem solid var(--secondary-color);
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 1.1rem 1.1rem;
+}
+
+.flex-container .text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.flex-container .text h3{
+    color: var(--text-color);
+    text-transform: uppercase;
+    font-size: clamp(0.3rem, 4vw, 1rem);
+    margin-bottom: 2rem;
+}
+
+.flex-container .text h2{
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    margin-bottom: 2rem;
+    font-weight: 550;
+    text-align: center;
+}
+
+.flex-container .text p{
+    color: var(--text-color);
+    margin: 0 3rem 3.5rem;
+    text-align: center;
+}
+
+.flex-container .text a{
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 0.6rem 1.6rem;
+    border: 0.1rem solid var(--secondary-color);
+}
+
+.flex-container .text a:hover{
+    background-color: var(--secondary-color);
+    color: var(--main-color);
+    transition: all 200ms ease-in-out;
+}
+
+.picture{
+    background: url(../img/gourmetpaket.webp);
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* foten */
+
+footer{
+    background: black;
+    height: auto;
+    width: 100vw;
+    padding-top: 3rem;
+    color: var(--text-color);
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 0 3rem 0;
+}
+
+.socials li{
+    margin: 0 10px;
+
+}
+
+.socials a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.socials a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+    padding: 0.4rem;
+}
+
+.socials a:hover i{
+    color: var(--main-color);
+}
+
+@keyframes fade-from-left{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes fade-from-right{
+    from{
+        left: 120%;
+    }
+    to{
+        left: 0;
+    }
+}
+
+@media screen and (max-width:900px){
+    
+    nav ul{
+        display: none;  
+        height: initial;
+    }
+
+    #hamburger:checked ~ .hamburger-overlay > ul{
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(15, 14, 14);
+        position: absolute;
+        top: var(--navbar-height);
+        right: 0;
+        margin: 0;
+    }
+
+    #hamburger:checked ~ .hamburger-overlay > ul li a{
+        border: none;
+        padding: 0 3rem;
+    }
+
+    #hamburger:checked ~ .hamburger-overlay > ul .dropdown i{
+        display: none;
+    }
+
+    #hamburger:checked ~ .hamburger-overlay > ul .dropdown:hover .dropdown-content{
+        display: none;
+    }
+
+    header label{
+        display: block;
+    }
+}
+
+@media screen and (max-width:999px){
+    .grid-container{
+        grid-template-areas:
+        "a"
+        "b"
+        "c" 
+        "d";
+
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:800px){
+    .paket{
+        height: 40rem;
+    }
+
+    .flex-container{
+        flex-direction: column;
+    }
+
+    .picture{
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width:375px){
+    .text > p{
+        display: none;
+    }
+}
+
