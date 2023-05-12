@@ -9,6 +9,7 @@ body{
     font-family:'Courier New', Courier, monospace, sans-serif;
     height: 100%;
     background-color: var(--main-color);
+    letter-spacing: 0.063rem;
 }
 
 header{
@@ -160,9 +161,87 @@ header label{
     
 }
 
-/* Heron */
+/* Booking form */
 
+.background{
+    background: url(../img/Galaxen.webp);
+    background-size: cover;
+    background-position: center;
+    margin-top: 1rem;
+    padding-top: 10rem;
+    min-height: 58rem;
+}
 
+.container{
+    margin: 0rem 0.1388vw;
+    box-shadow: 0.625rem 0.925rem 1.15rem rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+
+.container-time{
+    background-color: #0000005b;
+    padding: 3.5rem;
+    outline: 0.156rem dashed #ffffff;
+    outline-offset: -2rem;
+    text-align: center;
+}
+
+.heading{
+    font-size: 2.188rem;
+    text-transform: uppercase;
+}
+
+.heading-days{
+    color: #0070f0;
+    font-size: 2.05rem;
+    margin-bottom: 1rem;
+}
+
+.heading-phone{
+    font-size: 1.3rem;
+}
+
+.container-form{
+    padding: 1.1rem 0;
+    margin: 0 auto;
+}
+
+form{
+    display: grid;
+    grid-row-gap: 1.1rem;
+}
+
+form p{
+    font-weight: 600;
+}
+
+.form-field{
+    display: flex;
+    justify-content: space-between;
+}
+
+input,select{
+    pad: 10px 15px;
+}
+
+.btn{
+    background-color: rgba(255, 255, 255, 0.927);
+    padding: 10px 15px;
+    border: none;
+    font-size: 1.08rem;
+    border-radius: 6.25rem;
+    -webkit-border-radius: 6.25rem;
+    box-shadow: 0.438rem 0.625rem 0.75rem rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all;
+}
+
+.btn:hover{
+    transform: scale(1.03);
+    box-shadow: 0.438rem 0.625rem 0.75rem rgba(0, 0, 0, 0.1);;
+}
 
 /* Korten */
 
@@ -525,5 +604,17 @@ footer{
     .text > p{
         display: none;
     }
+    .container{
+        margin: 0;
+    }
 }
 
+@media screen and (max-width:1200px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width:770px){
+    
+}

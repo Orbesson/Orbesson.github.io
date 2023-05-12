@@ -8,7 +8,7 @@
         <meta name="description" content="hotel">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/b085ed4d95.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/boka.css">
         <link rel="stylesheet" type="text/css" href="../css/css-reset.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="../js/script.js"></script>
@@ -42,31 +42,58 @@
             </nav>
         </header>
         <main>
-            <div class="container">
-                <div class="container-time">
-                    <h2 class="heading">öppen tider</h2>
-                    <h3 class="heading-days">Måndag-Fredag</h3>
-                    <p>07:00 - 11:00 (frukost)</p>
-                    <p>17:30 - 20:00 (middag)</p>
+            <div class="background">
+                <div class="container">
+                    <div class="container-time">
+                        <h2 class="heading">Öppettider</h2>
+                        <h3 class="heading-days">Måndag-Fredag</h3>
+                        <p>07:00 - 11:00 (frukost)</p>
+                        <p>17:30 - 20:00 (middag)</p>
 
-                    <h3 class="heading-days">Lördag-Söndag</h3>
-                    <p>08:00 - 12:00 (frukost)</p>
-                    <p>17:30 - 21:00 (middag)</p>
+                        <h3 class="heading-days">Lördag-Söndag</h3>
+                        <p>08:00 - 12:00 (frukost)</p>
+                        <p>17:30 - 21:00 (middag)</p>
 
-                    <hr>
+                        <hr>
 
-                    <h4 class="heading-phone">Ring oss: 072-3050850</h4>
-                </div>
+                        <h4 class="heading-phone">Ring oss: 072-3050850</h4>
+                    </div>
 
-                <div class="container-form">
-                    <form action="#">
-                        <h2 class="heading heading-yellow">Online Bokning</h2>
+                    <div class="container-form">
+                        <form action="#">
+                            <h2 class="heading heading-yellow">Online Bokning</h2>
 
-                        <div class="form-field">
-                            <p>Ditt namn</p>
-                            <input type="text" placeholder="Ditt Namn">
-                        </div>
-                    </form>
+                            <div class="form-field">
+                                <p>Ditt namn</p>
+                                <input type="text" placeholder="Ditt namn">
+                            </div>
+                            <div class="form-field">
+                                <p>Din email</p>
+                                <input type="email" placeholder="Din email">
+                            </div>
+                            <div class="form-field">
+                                <p>Datum (från)</p>
+                                <input type="date">
+                            </div>
+                            <div class="form-field">
+                                <p>Datum (till)</p>
+                                <input type="date">
+                            </div>
+                            <div class="form-field">
+                                <p>Hur många personer?</p>
+                                <select name="select" id="#">
+                                    <option value="1">1 person</option>
+                                    <option value="2">2 personer</option>
+                                    <option value="3">3 personer</option>
+                                    <option value="4">4 personer</option>
+                                    <option value="5">5 personer</option>
+                                    <option value="5+">5+ personer</option>
+                                </select>
+                            </div>
+
+                            <button class="btn">Skicka in</button>
+                        </form>
+                    </div>
                 </div>
             </div>
             <div class="grid-container">
