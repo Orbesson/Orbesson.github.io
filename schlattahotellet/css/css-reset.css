@@ -81,3 +81,7 @@ select {
     scroll-behavior: auto !important;
   }
 }
+
+@media screen and (max-width: 415px){
+  
+}

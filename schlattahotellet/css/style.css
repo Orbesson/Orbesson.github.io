@@ -91,9 +91,9 @@ nav ul a:hover{
 header label{
     display: none;
     position: absolute;
-    right: 10px;
-    top: 22px;
-    padding: 20px;
+    right: 0.625rem;
+    top: 1.375rem;
+    padding: 1.25rem;
     cursor: pointer;
     z-index: 9999;
 }
@@ -103,8 +103,8 @@ header label{
 .hamburger-icons::before{
     content: "";
     display: block;
-    width: 22px;
-    height: 3px;
+    width: 1.375rem;
+    height: 0.188rem;
     background-color: white;
     position: absolute;
     left: 50%;
@@ -113,11 +113,11 @@ header label{
 }
 
 .hamburger-icons::before{
-    transform: translate(-50%,-6px);
+    transform: translate(-50%,-0.375rem);
 }
 
 .hamburger-icons::after{
-    transform: translate(-50%,6px)
+    transform: translate(-50%,0.375rem)
 }
 
 #hamburger:checked + label .hamburger-icons{
@@ -437,9 +437,9 @@ footer{
 }
 
 .footer-content p{
-    max-width: 500px;
-    margin: 10px auto;
-    line-height: 28px;
+    max-width: 31.25rem;
+    margin: 0.625rem auto;
+    line-height: 1.75REM;
     font-size: 0.9rem;
     text-transform: capitalize;
     text-decoration: none;
@@ -454,7 +454,7 @@ footer{
 }
 
 .socials li{
-    margin: 0 10px;
+    margin: 0 0.625rem;
 
 }
 
@@ -552,7 +552,7 @@ footer{
     }
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:390px){
     .text > p{
         display: none;
     }
