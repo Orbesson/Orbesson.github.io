@@ -10,7 +10,7 @@ body{
     height: 100%;
     background-color: var(--main-color);
     letter-spacing: 0.063rem;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header{
@@ -301,7 +301,7 @@ footer{
     line-height: 3rem;
 }
 
-.footer-content p{
+.footer-content a, .footer-content p{
     max-width: 31.25rem;
     margin: 0.625rem auto;
     line-height: 1.75REM;
