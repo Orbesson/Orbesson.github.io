@@ -437,7 +437,8 @@ footer{
     line-height: 3rem;
 }
 
-.footer-content p{
+.footer-content a{
+    color: var(--text-color);
     max-width: 31.25rem;
     margin: 0.625rem auto;
     line-height: 1.75REM;
